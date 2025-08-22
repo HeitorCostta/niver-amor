@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Feliz Aniversário, Amor 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      height: 100vh;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      overflow: hidden;
+      margin: 0;
+      padding-top: 30px;
+      position: relative;
+    }
+
+    .hint {
+      font-size: 32px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 2px 2px 4px #c1124f;
+      margin-bottom: 60px;
+      text-align: center;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .cake {
+      position: relative;
+      width: 260px;
+      height: 150px;
+      background: #d2691e;
+      border-radius: 15px;
+      box-shadow: inset 0 0 15px #00000033;
+      margin: 0 auto;
+    }
+
+    .icing {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 60px;
+      background: #fff0f5;
+      border-radius: 15px 15px 0 0;
+      box-shadow: inset 0 -5px 5px #ff4d6d33;
+    }
+
+    .candle {
+      position: absolute;
+      width: 14px;
+      height: 50px;
+      background: #fffacd;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 4px;
+    }
+
+    .flame {
+      position: absolute;
+      top: -22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 18px;
+      height: 24px;
+      background: radial-gradient(circle at 50% 60%, #ffeb3b, #ff9800);
+      border-radius: 50%;
+      animation: flicker 0.4s infinite alternate;
+      cursor: pointer;
+      filter: drop-shadow(0 0 6px #ffcc00);
+    }
+
+    @keyframes flicker {
+      from { transform: translateX(-50%) scale(1); opacity: 1; }
+      to   { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
+    }
+
+    .message {
+      margin-top: 30px;
+      font-size: 36px;
+      font-weight: bold;
+      display: none;
+      text-align: center;
+      color: #fff;
+      text-shadow: 2px 2px 4px #c1124f;
+      width: 100%;
+    }
+
+    .hearts {
+      position: absolute;
+      font-size: 24px;
+      pointer-events: none;
+      animation: floatUp 6s linear forwards;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) scale(0.7); opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.3); opacity: 0; }
+    }
+
+    .photos {
+      display: flex;
+      margin: 20px auto 0 auto;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    .photos img {
+      width: 100px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00000066;
+      opacity: 0;
+      transition: opacity 0.5s ease-in, transform 0.5s ease-in;
+      transform: scale(0.8);
+    }
+
+    .photos img.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Caixa de mensagem */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: #fff;
+      padding: 25px 20px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      color: #c1124f;
+      z-index: 100;
+      transition: transform 0.5s ease-in-out;
+      max-width: 90%;
+    }
+
+    .popup.show {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup button {
+      margin-top: 15px;
+      padding: 8px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: #c1124f;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .popup h2 {
+      margin-bottom: 10px;
+    }
+
+    .popup p {
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    /* Ajustes para telas menores */
+    @media (max-width: 480px) {
+      .hint { font-size: 24px; margin-bottom: 40px; }
+      .cake { width: 200px; height: 120px; }
+      .message { font-size: 28px; }
+      .photos img { width: 80px; }
+      .popup { font-size: 18px; padding: 20px 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hint">🎂 Apague a vela rápido, para ver a surpresa! 💖</div>
+
+  <div class="cake">
+    <div class="icing"></div>
+    <div class="candle">
+      <div class="flame"></div>
+    </div>
+  </div>
+
+  <div class="message">🎉 Parabéns amor! Te amo 💖</div>
+
+  <div class="photos">
+    <img src="1.jpeg" alt="foto1">
+    <img src="2.jpeg" alt="foto2">
+    <img src="3.jpeg" alt="foto3">
+    <img src="4.jpeg" alt="foto4">
+    <img src="5.jpeg" alt="foto5">
+    <img src="6.jpeg" alt="foto6">
+    <img src="7.jpeg" alt="foto7">
+    <img src="8.jpeg" alt="foto8">
+    <img src="9.jpeg" alt="foto9">
+  </div>
+
+  <!-- Música de fundo -->
+  <audio id="bgMusic" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
+
+  <div class="popup" id="popup">
+    <h2>🎉 Feliz Aniversário, Amor! 🎉</h2>
+
+    <p>Eu me sinto <strong>tão sortudo</strong> por ter te conhecido…  
+    Por ter cruzado com essa menina incrível que transforma qualquer dia comum em algo especial. ✨</p>
+
+    <p>Que você continue sendo sempre essa pessoa que me inspira, que contagia com seu <strong>sorriso lindo</strong> e que ilumina tudo ao seu redor. 😍</p>
+
+    <p>Hoje é o seu dia, mas a verdade é que todos os dias eu me sinto presenteado por ter você na minha vida.💖</p>
+
+    <p>Eu te amo e agradeço por cada risada, cada abraço e cada instante que compartilhamos.  
+    Que venha mais um ano incrível ao seu lado! 🎂💫</p>
+
+    <button onclick="closePopup()">Fechar</button>
+  </div>
+
+  <script>
+    const flame = document.querySelector(".flame");
+    const message = document.querySelector(".message");
+    const photosContainer = document.querySelector(".photos");
+    const photos = photosContainer.querySelectorAll("img");
+    const popup = document.getElementById("popup");
+    const music = document.getElementById("bgMusic");
+
+    function closePopup() {
+      popup.classList.remove("show");
+      // Opcional: parar a música ao fechar
+      // music.pause();
+    }
+
+    flame.addEventListener("click", () => {
+      flame.style.display = "none";
+      message.style.display = "block";
+      photosContainer.style.opacity = 1;
+      popup.classList.add("show");
+
+      // Música com fade-in suave
+      music.volume = 0;
+      music.play();
+      let vol = 0;
+      const fadeIn = setInterval(() => {
+        if(vol < 1){
+          vol += 0.02; 
+          music.volume = vol;
+        } else {
+          clearInterval(fadeIn);
+        }
+      }, 100);
+
+      // Mostrar fotos uma a uma
+      photos.forEach((photo, index) => {
+        setTimeout(() => {
+          photo.classList.add("show");
+        }, index * 400);
+      });
+
+      // Corações contínuos na tela
+      setInterval(() => {
+        const heart = document.createElement('span');
+        heart.textContent = Math.random() > 0.5 ? '❤️' : '💖';
+        heart.className = 'hearts';
+        heart.style.left = (Math.random() * 100) + 'vw';
+        heart.style.fontSize = (16 + Math.random() * 30) + 'px';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 6000);
+      }, 150);
+    });
+  </script>
+</body>
+</html>
